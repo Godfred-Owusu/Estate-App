@@ -1,0 +1,73 @@
+.residence-container{
+    overflow: hidden;
+    position: relative;
+}
+.residence-head{
+    margin-bottom: 2rem;
+}
+.residence-card{
+    gap: 0.6rem;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: max-content;
+    margin: auto;
+    transition: all 300ms ease-in;
+}
+.residence-card>img{
+    width: 100%;
+    max-width: 15rem;
+}
+.residence-card>:nth-child(2){
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+.residence-card>:nth-child(3){
+    font-size: 1.5rem;
+ }
+
+ .residence-card>:nth-child(4){
+    font-size: 0.7rem;
+    width: 15rem;
+ }
+
+ .residence-card:hover{
+    scale: 1.025;
+    cursor: pointer; 
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(136, 160, 255, 0.46) 217.91%);
+    box-shadow: 0px 72px 49px -51px rgba(136 160 255 0.21);
+ }
+.swiper-horizontal{
+    overflow: visible;
+}
+.residence-btn{
+    position: absolute;
+    top: -4rem;
+    right: 0;
+}
+.residence-btn button{
+    font-style: 1.2rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    color: blue;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.residence-btn>:nth-child(1){
+    background-color: #eeeeff;
+}
+
+.residence-btn>:nth-child(2){
+    box-shadow: 0  0 5px 1px rgba(0, 0, 0 ,0.25);
+}
+@media (max-width:640px) {
+    .residence-head{
+        align-items: center;
+    }
+    .residence-btn{
+        position: initial;
+    }
+}

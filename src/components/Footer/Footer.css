@@ -1,0 +1,21 @@
+.footer-container{
+    justify-content: space-between;
+}
+.footer-left{
+    gap: 1rem;
+}
+.footer-menu{
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+@media (max-width:768px) {
+    .footer-container{
+        justify-content: center;
+    }
+
+    .footer-container>div{
+        align-items: center;
+        text-align: center;
+    }
+}
