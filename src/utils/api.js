@@ -1,0 +1,52 @@
+import React from "react";
+import axios from "axios";
+import dayjs from "dayjs";
+import { toast } from "react-toastify";
+export const api = axios.create({
+  baseURL: "http://localhost:8000/api",
+});
+
+// Get all properties
+export const getAllProperties = async () => {
+  try {
+    const response = await api.get("/residency/allResidecies", {
+      timeout: 10 * 1000,
+    });
+    if (response.status === 400 || response.status === 500) {
+      throw response.data;
+    }
+    return response.data;
+  } catch (error) {
+    toast.error("Something went wrong");
+
+    throw error;
+  }
+};
+
+// Get a proprety
+export const getProperty = async (id) => {
+  try {
+    const response = await api.get(`/residency/${id}`, {
+      timeout: 10 * 1000,
+    });
+    if (response.status === 400 || response.status === 500) {
+      throw response.data;
+    }
+    return response.data;
+  } catch (error) {
+    toast.error("Something went wrong");
+    console.log(error);
+
+    throw error;
+  }
+};
+
+// Create a user
+export const createUser = async (email) => {
+  try {
+    await api.post(`/user/register`, { email });
+  } catch (error) {
+    toast.error("Something went wrong, Please try again");
+    throw error;
+  }
+};

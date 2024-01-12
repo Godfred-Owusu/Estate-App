@@ -1,21 +1,22 @@
-.footer-container{
-    justify-content: space-between;
+.footer-container {
+  justify-content: space-between;
+  border-top: 5px solid rgba(0, 0, 0, 0.148);
 }
-.footer-left{
-    gap: 1rem;
+.footer-left {
+  gap: 1rem;
 }
-.footer-menu{
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-    font-weight: 500;
+.footer-menu {
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
-@media (max-width:768px) {
-    .footer-container{
-        justify-content: center;
-    }
+@media (max-width: 768px) {
+  .footer-container {
+    justify-content: center;
+  }
 
-    .footer-container>div{
-        align-items: center;
-        text-align: center;
-    }
+  .footer-container > div {
+    align-items: center;
+    text-align: center;
+  }
 }
